@@ -1,0 +1,21 @@
+class Solution {
+public static void gensubs(List<List<Integer>> result , List<Integer> curr , int idx , int[] nums ){
+    if(idx == nums.length){
+        result.add(new ArrayList<>(curr));
+        return;
+    }
+    curr.add(nums[idx]);
+    gensubs(result , curr , idx+1 ,nums);
+
+    curr.remove(curr.size()-1);
+    gensubs(result , curr , idx+1,nums);
+
+}
+    public List<List<Integer>> subsets(int[] nums) {
+        List<List<Integer>> result = new ArrayList<>();
+        gensubs(result , new ArrayList<>() , 0 ,nums);
+        return result;
+
+        
+    }
+}
