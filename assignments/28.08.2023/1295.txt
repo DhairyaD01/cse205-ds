@@ -1,0 +1,9 @@
+class Solution:
+    def findNumbers(self, nums: List[int]) -> int:
+        counter= 0
+        for ele in nums:
+            m = len(str(ele))
+            print(m)
+            if m%2 == 0:
+                counter = counter + 1
+        return counter
