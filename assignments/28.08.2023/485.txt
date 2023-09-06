@@ -1,11 +1,19 @@
-class Solution:
-    def findMaxConsecutiveOnes(self, nums: List[int]) -> int:
-        counter = 0
-        maxCount = 0
-        for ele in nums:
-            if ele == 1:
-                counter= counter + 1
-                maxCount = max(maxCount, counter)
-            else :
-                counter = 0
-        return maxCount 
+class Solution {
+    public int findMaxConsecutiveOnes(int[] nums) {
+        int check = 0;
+        int max = check;
+        for(int i = 0 ; i < nums.length ; i++){
+            if(nums[i] == 1 ){
+                check ++;
+            }
+            else {
+                max = Math.max(check , max);
+                check = 0;
+            }
+        }
+        max =  Math.max(max , check);
+        return max;
+        
+        
+    }
+}
