@@ -355,7 +355,7 @@
 // }
 
 
-class main {
+// class main {
     // public int triangularSum(int[] nums) {
     //     int[][] dp = new int[nums.length][nums.length];
     //     for(int i = 0 ; i < nums.length ; i++){
@@ -369,24 +369,158 @@ class main {
     //     return dp[nums.length-1][nums.length-1];
         
     // }
+//     public static void main(String[] args) {
+//         int nums[] = {1,2,3,4,5} ;
+//         int[][] dp = new int[nums.length][nums.length];
+//         for(int i = 0 ; i < nums.length ; i++){
+//             dp[0][i] = nums[i];
+//         }
+//         for(int j = 1 ; j < nums.length ; j ++){
+//             for(int i = 0 ; i < nums.length-j ; i++){
+//             dp[j][i] = (dp[j-1][i] + dp[j-1][i+1])%10;
+//         }
+//         }
+//         for (int i = 0; i < dp.length; i++) {
+//             for (int j = 0; j < dp[i].length; j++) {
+//                 System.out.print(dp[i][j] + " ");
+//             }
+//             System.out.println(); // Move to the next line after each row
+//         }
+//         System.out.println(dp[nums.length-1][0]);
+        
+//     }
+// }
+
+// class LL{
+//     Node head;
+//     class Node{
+//         String data ;
+//         Node next;
+//         Node(String data){
+//             this.data = data;
+//             this.next = null;
+//         }
+//     }
+//     public void addfirst(String data){
+//         Node newNode = new Node(data);
+//         if(head == null){
+//             head = newNode;
+//             return;
+//         }
+//         newNode.next = head;
+//         head = newNode;
+        
+//     }
+//     public void addlast(String data){
+//         Node newNode = new Node(data);
+//         if(head == null){
+//             head = newNode;
+//             return;
+//         }
+//         Node CurrNode = head;
+//         while(CurrNode.next != null){
+//             CurrNode = CurrNode.next;
+
+//         }
+
+
+
+//     }
+
+//     public void delfi(){
+//         if(head == null){
+//             System.out.println("The list is empty");
+//         }
+
+//         head = head.next;
+//     }
+//     public void della(){
+//         Node CurrNode = head;
+//         if(head.next == null){
+//             head = null;
+//             return;
+//         }
+//         while(CurrNode.next.next != null){
+//             CurrNode = CurrNode.next;
+//         }
+//         CurrNode.next = null;
+//     }
+//     public void printNode(){
+//         Node CurrNode = head;
+//         if(head == null ){
+//             System.out.println("List is empty");
+//             return;
+//         }
+//         while(CurrNode != null){
+//             System.out.print(CurrNode.data + "->");
+//             CurrNode = CurrNode.next;
+
+//         }
+        
+        
+//     }
+//     public void reverse(){
+
+//         if(head == null || head.next ==  null){
+//             return;
+//         }
+//         Node pervious = head;
+//         Node currn = head.next;
+//         while(currn != null){
+//             Node next = currn.next;
+//             currn.next = pervious;
+
+//             pervious = currn;
+//             currn = next;            
+//         }
+//         head.next = null;
+//         head = pervious;
+
+//     }
+//    public Node reverse(Node head) {
+//     if (head == null || head.next == null) {
+//         return head;
+//     }
+//     Node newHead = reverse(head.next);
+//     head.next.next = head;
+//     head.next = null;
+//     return newHead;
+// }
+//     public static void main(String[] args) {
+//         LL list = new LL();
+//         list.addfirst("hello");
+//         list.addfirst("hell");
+//         list.addfirst("hel");
+//         list.addfirst("he");
+
+//         list.printNode();
+
+//         list.reverse(list.head);
+//         System.out.println();
+//         list.printNode();
+        
+//         ;
+        
+
+
+        
+//     }
+// }
+
+
+import java.util.*;
+class main{
+    // public void removen(LinkedList<String>){
+
+    // }
     public static void main(String[] args) {
-        int nums[] = {1,2,3,4,5} ;
-        int[][] dp = new int[nums.length][nums.length];
-        for(int i = 0 ; i < nums.length ; i++){
-            dp[0][i] = nums[i];
-        }
-        for(int j = 1 ; j < nums.length ; j ++){
-            for(int i = 0 ; i < nums.length-j ; i++){
-            dp[j][i] = (dp[j-1][i] + dp[j-1][i+1])%10;
-        }
-        }
-        for (int i = 0; i < dp.length; i++) {
-            for (int j = 0; j < dp[i].length; j++) {
-                System.out.print(dp[i][j] + " ");
-            }
-            System.out.println(); // Move to the next line after each row
-        }
-        System.out.println(dp[nums.length-1][0]);
+        LinkedList<String> list = new LinkedList<String>();
+        
+        list.add("Hello");
+        list.add("How");
+        list.add("You");
+
+        System.out.println(list);
         
     }
 }
