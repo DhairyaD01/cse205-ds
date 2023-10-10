@@ -508,19 +508,69 @@
 // }
 
 
-import java.util.*;
-class main{
-    // public void removen(LinkedList<String>){
+// import java.util.*;
+// class main{
+//     // public void removen(LinkedList<String>){
 
-    // }
-    public static void main(String[] args) {
-        LinkedList<String> list = new LinkedList<String>();
-        
-        list.add("Hello");
-        list.add("How");
-        list.add("You");
+//     // }
+//     /**
+//  * Definition for singly-linked list.
+//  * public class ListNode {
+//  *     int val;
+//  *     ListNode next;
+//  *     ListNode() {}
+//  *     ListNode(int val) { this.val = val; }
+//  *     ListNode(int val, ListNode next) { this.val = val; this.next = next; }
+//  * }
+//  */
+// class Solution {
+//   private static ListNode reverse(ListNode head){
+//       if(head == null || head.next == null){
+//           return head;
+//       }
+//       ListNode curr = head;
+//       ListNode prev = null;
+//       while(curr != null){
+//           ListNode next = curr.next;
+//           curr.next = prev;
+//           prev = curr;
+//           curr = curr.next;
+      
+//       }
+//       return prev;
+//   }
 
-        System.out.println(list);
+
+//   public boolean isPalindrome(ListNode head) {
+//       ListNode hare = head.next;
+//       ListNode tur = head;
+//       while(hare.next != null && hare.next.next != null){
+//           hare = hare.next.next;
+//           tur = tur.next;
+//       }
+//       ListNode second = reverse(tur.next);
+//       tur.next = second;
+//       hare = head;
+//       while(second != null){
+//           if(hare.val != second.val){
+//               return false;
+//           }
+//           hare = hare.next;
+//           second = second.next;
+
+//       }
+//       return false;
+
+
+      
+//   }
+// }
+//     public static void main(String[] args) {
+//       for (int i = 0; i < 100;) {
+//         System.out.println("hello");
         
-    }
-}
+//       }
+        
+//     }
+// }
+
