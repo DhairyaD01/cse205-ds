@@ -544,7 +544,7 @@
 //   public boolean isPalindrome(ListNode head) {
 //       ListNode hare = head.next;
 //       ListNode tur = head;
-//       while(hare.next != null && hare.next.next != null){
+    //   while(hare.next != null && hare.next.next != null){
 //           hare = hare.next.next;
 //           tur = tur.next;
 //       }
@@ -573,4 +573,40 @@
         
 //     }
 // }
-
+// public class main{
+//     public static void main(String[] args) {
+//         int arr[] = {3,4,6,5,8,7};
+//         for(int i = 0 ; i < arr.length-1 ; i++){
+//             int temp = arr[i+1];
+//             for (int j = i + 1; j >= 0; j--) {
+//                 if(temp < arr[j]){
+//                     int temp1 = temp;
+//                     temp = arr[j];
+//                     arr[j] = temp1;
+//                 }
+                
+//             }
+//         }
+//         for (int i = 0; i < arr.length; i++) {
+//             System.out.println(arr[i]);
+//         }
+//     }
+// }
+public class main {
+    public static void main(String[] args) {
+        int arr[] = {3, 4, 6, 5, 8, 7};
+        for (int i = 0; i < arr.length - 1; i++) {
+            int temp = arr[i];
+            int j = i+1;
+            for ( j j >= 0; j--) {
+                if (temp < arr[j]) {
+                    arr[j+1] = arr[j];
+                }
+            }
+            arr[]
+        }
+        for (int i = 0; i < arr.length; i++) {
+            System.out.println(arr[i]);
+        }
+    }
+}

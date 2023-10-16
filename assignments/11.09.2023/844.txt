@@ -1,0 +1,46 @@
+import java.util.Stack;
+
+class Solution {
+    public static boolean compareStacks(Stack<Character> stack1, Stack<Character> stack2) {
+        if (stack1.size() != stack2.size()) {
+            return false;
+        }
+
+        // Compare elements from both stacks
+        while (!stack1.isEmpty() && !stack2.isEmpty()) {
+            char char1 = stack1.pop();
+            char char2 = stack2.pop();
+
+            // If characters are not equal, stacks are not equal
+            if (char1 != char2) {
+                return false;
+            }
+        }
+
+        // Stacks are equal if both are empty at this point
+        return stack1.isEmpty() && stack2.isEmpty();
+    }
+
+    public boolean backspaceCompare(String s, String t) {
+        Stack<Character> sts = new Stack<>();
+        Stack<Character> stt = new Stack<>();
+
+        for (char c : s.toCharArray()) {
+            if (c != '#') {
+                sts.push(c);
+            } else if (!sts.isEmpty()) {
+                sts.pop();
+            }
+        }
+
+        for (char c : t.toCharArray()) {
+            if (c != '#') {
+                stt.push(c);
+            } else if (!stt.isEmpty()) {
+                stt.pop();
+            }
+        }
+
+        return compareStacks(sts, stt);
+    }
+}
